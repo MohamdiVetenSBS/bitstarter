@@ -55,26 +55,18 @@ if(require.main == module) {
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
         .option('-u, --url <url_link>', 'Website URL',true, URL_DEFAULT )
         .parse(process.argv);
-          
-         
+                 
            restler.get(program.url).on('complete', function(result, data){
-         // console.log("First" + result);
-
+         
 	       urlHTML = result;
 
-	        //  var checkJson = checkHtmlFile(program.file, program.checks);                                                                             
-    var checkJsonURL = checkURL(urlHTML, program.checks);
-// mofi                                                                                                                                         
+	                                                                      
+    var checkJsonURL = checkURL(urlHTML, program.checks);                                                                                                                                         
     var outJson = JSON.stringify(checkJsonURL, null, 4);
     console.log( outJson);
 
 
 });
-   // var checkJson = checkHtmlFile(program.file, program.checks);
-  //  var checkJsonURL = checkURL(urlHTML, program.checks);
-// mofi
- //   var outJson = JSON.stringify(checkJsonURL, null, 4);
-  //  console.log("Final" + outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
     exports.checkURL = checkURL;
