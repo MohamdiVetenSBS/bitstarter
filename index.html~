@@ -140,7 +140,8 @@ color: #903; font-size: 300%;
 			Customer Next Door harnesses social networks (Twitter, 			    Facebook, LinkedIn,) to find list of 				people who live or work around you and maybe potentially customer to your services.  			</p>
 		
 		<p>With the wealth of information avilable, you can narrow down your search to specific criterias : Age, sex, interests, ... 			etc.</br>
-		What are you waiting for?  <a href="#register" style= "color:#000000"> Register here </a>
+		What are you waiting for? 
+		<div> <h4 class="text-center"> <a href="#register" style= "color:#000000"> Register here </a> </h4> </div> 
 		 </p>
                  </div>
             </div>
