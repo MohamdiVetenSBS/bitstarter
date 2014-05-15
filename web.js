@@ -8,10 +8,33 @@ app.get('/', function(request, response) {
 	response.send(fileContent.toString());
 });
 
+app.get('/css/:id', function(req, res) {
+  res.sendfile(__dirname + '/css/' + req.params.id);
+});
+
+app.get('/js/:id', function(req, res) {
+  res.sendfile(__dirname + '/js/' + req.params.id);
+});
+
+app.get('/less/:id', function(req, res) {
+  res.sendfile(__dirname + '/less/' + req.params.id);
+});
+
+app.get('/img/:id', function(req, res) {
+  res.sendfile(__dirname + '/img/' + req.params.id);
+});
+
+
+app.get('/html/:id' , function(req, res) {
+res.sendfile(__dirname + '/html/' + req.params.id);
+});
+app.get('/font-awesome/:id' , function(req, res) {
+res.sendfile(__dirname + '/font-awesome/' + req.params.id);
+});
+
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
-	var cont = fs.readFileSync('index.html');
-	console.log(cont.toString());
+
 
   console.log("Listening on " + port);
 });
